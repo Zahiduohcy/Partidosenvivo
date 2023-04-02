@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Football Live Score</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fixtures">Fixtures</string>
+    <string name="standing">Standing</string>
+    <string name="teams">Teams</string>
+    <string name="strip">–</string>
+
+    <string name="team_a">Team A</string>
+    <string name="team_b">Team B</string>
+    <string name="team_statistics">Team Statistics</string>
+    <string name="players">Players</string>
+    <string name="player34"></string>
+    <string name="player567"></string>
+    <string name="home_formation"></string>
+    <string name="away_formation"></string>
+    <string name="player1"></string>
+    <string name="player2"></string>
+
+    <!-- AdMob ad unit IDs -->
+    <string name="admob_app_id">ca-app-pub-6177861056491607~6738811390</string>
+    <string name="banner_home_footer">ca-app-pub-6177861056491607/2349916347</string>
+    <string name="interstitial_full_screen">ca-app-pub-6177861056491607/3673664354</string>
+    <string name="rewarded_video">ca-app-pub-6177861056491607/1047501013</string>
+
+    <!--test ads-->
+    <!--<string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>-->
+    <!--<string name="interstitial_full_screen">ca-app-pub-3940256099942544/8691691433</string>-->
+    <!--<string name="rewarded_video">ca-app-pub-3940256099942544/5224354917</string>-->
+
+    <string name="diet_plan_content"><![CDATA[
+<div>
+    This is a Football Live Score app. Whether you want to check your best team
+    play or check a friendly match between countries then you can access them
+    all in the app. The structure of the app makes it easy to use and you’ll
+    get all the results you need with just the touch of a button.
+</div>
+<div>
+    Here are some of the features:
+</div>
+<div>
+    Schedules/fixtures overviews per country/league
+</div>
+<div>
+    • Events
+</div>
+<div>
+    • Line-ups
+</div>
+<div>
+    • Live tables during soccer matches
+</div>
+<div>
+    • Live football statistics (ball possession, shots on goal etc)
+</div>
+<div>
+    • Player information
+</div>
+<div>
+    • Team information
+</div>
+<div>
+    • Substitution
+</div>
+<div>
+    <br/>
+</div>
+<div>
+    Cheers!
+</div>
+        ]]>
+    </string>
+</resources>

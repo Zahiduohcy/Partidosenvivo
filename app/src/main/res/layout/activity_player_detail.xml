@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.players.playerdetail.PlayerDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.PopupOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginBottom="45dp"
+            app:expandedTitleMarginStart="120dp"
+            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Headline"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:titleEnabled="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ic_person"/>
+                <TextView
+                    android:id="@+id/txtPosition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/colorBackground"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="70dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_margin="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp" android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" android:text="Age"/>
+                        <TextView
+                            android:id="@+id/txtAge"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                        />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp" android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" android:text="Birth Date"/>
+                        <TextView
+                            android:id="@+id/txtBirthDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                        />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp" android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" android:text="Birth Place"/>
+                        <TextView
+                            android:id="@+id/txtBirthPlace"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                        />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp" android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" android:text="Birth Country"/>
+                        <TextView
+                            android:id="@+id/txtBirthCountry"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                        />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp" android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" android:text="Nationality"/>
+                        <TextView
+                            android:id="@+id/txtNationality"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                        />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_margin="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:gravity="center"
+                            android:text="Weight (kg)"/>
+                        <TextView
+                            android:id="@+id/txtWeight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="35sp"/>
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:gravity="center"
+                            android:text="Height (m)"/>
+                        <TextView
+                            android:id="@+id/txtHeight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="35sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp" android:layout_marginEnd="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp" android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Total"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="On"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp" android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center" android:text="Shots"/>
+                        <TextView
+                            android:id="@+id/txtShotsTotal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/txtShotsOn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp" android:layout_marginEnd="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp" android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Total"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Conceded"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Assists"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp" android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center" android:text="Goals"/>
+                        <TextView
+                            android:id="@+id/txtGoalsTotal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/txtGoalsConceded"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/txtGoalsAssists"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp" android:layout_marginEnd="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp" android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Total"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Accuracy"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp" android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center" android:text="Passes"/>
+                        <TextView
+                            android:id="@+id/txtPassesTotal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/txtPassesAccuracy"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp" android:layout_marginEnd="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom" android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Total"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Blocks"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Interceptions"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp" android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center" android:text="Tackles"/>
+                        <TextView
+                            android:id="@+id/txtTacklesTotal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/txtTacklesBlocks"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/txtTacklesInterceptions"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp" android:layout_marginEnd="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom" android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Total"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Won"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text=""/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp" android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center" android:text="Duels"/>
+                        <TextView
+                            android:id="@+id/txtDuelsTotal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/txtDuelsWon"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp" android:layout_marginEnd="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom" android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Attempts"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Success"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text=""/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp" android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center" android:text="Dribbles"/>
+                        <TextView
+                            android:id="@+id/txtDribblesAttempts"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/txtDribblesSuccess"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp" android:layout_marginEnd="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom" android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Drawn"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Committed"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text=""/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp" android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center" android:text="Fouls"/>
+                        <TextView
+                            android:id="@+id/txtFoulsDrawn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/txtFoulsCommitted"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp" android:layout_marginEnd="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom" android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Yellow"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="YelloRed"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Red"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp" android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center" android:text="Cards"/>
+                        <TextView
+                            android:id="@+id/txtCardsYellow"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/txtCardsYellowred"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/txtCardsRed"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp" android:layout_marginEnd="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom" android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Success"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Missed"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Saved"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp" android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center" android:text="Penalty"/>
+                        <TextView
+                            android:id="@+id/txtPenaltySuccess"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/txtPenaltyMissed"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/txtPenaltySaved"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp" android:layout_marginEnd="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom" android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Appearences"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Minutes Played"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Lineups"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp" android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center" android:text="Games"/>
+                        <TextView
+                            android:id="@+id/txtGamesAppearences"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/txtGamesMinutesPlayed"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/txtGamesLineups"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp" android:layout_marginEnd="8dp"
+                android:layout_marginBottom="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom" android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="In"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Out"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_weight="1" android:gravity="center"
+                            android:text="Bench"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp" android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1.3"
+                            android:gravity="center" android:text="Substitutes"/>
+                        <TextView
+                            android:id="@+id/txtSubstitutesIn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/txtSubstitutesOut"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/txtSubstitutesBench"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_home_footer"/>"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

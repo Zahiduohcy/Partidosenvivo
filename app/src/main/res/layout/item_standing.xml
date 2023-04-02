@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/colorCardBackground"
+    app:cardElevation="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp" android:gravity="center" android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            android:id="@+id/txtRank"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:gravity="center" android:text="1"/>
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="36dp" android:layout_height="36dp"
+            app:srcCompat="@drawable/ic_team"/>
+        <TextView
+            android:id="@+id/txtTeamName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="4"
+            android:gravity="center" android:text="Paris Saint Germain"/>
+        <TextView
+            android:id="@+id/txtPlayed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:gravity="center" android:text="23"/>
+        <TextView
+            android:id="@+id/txtWin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:gravity="center" android:text="3"/>
+        <TextView
+            android:id="@+id/txtDraw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:gravity="center" android:text="2"/>
+        <TextView
+            android:id="@+id/txtLoss"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:gravity="center" android:text="1"/>
+        <TextView
+            android:id="@+id/txtGoals"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:gravity="center" android:text="10" android:textColor="@android:color/black"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

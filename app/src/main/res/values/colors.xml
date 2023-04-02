@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#012194</color>
+    <color name="colorPrimaryDark">#021663</color>
+    <color name="colorAccent">#F33C3C</color>
+
+    <color name="pass_match">#012194</color>
+    <color name="line_separator">#bfbcbc</color>
+    <color name="white">#fff</color>
+
+    <color name="colorTextDark">#121216</color>
+    <color name="colorTextLight">#34343e</color>
+    <color name="colorTextExtraLight">#9292a4</color>
+    <color name="colorBackground">#f0f0f5</color>
+    <color name="colorCardBackground">#f8f8fa</color>
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="6dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginEnd="6dp"
+    android:layout_marginBottom="3dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/colorCardBackground" app:cardCornerRadius="7dp"
+    app:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="45dp" android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitEnd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.533" app:srcCompat="@drawable/loading_animation"/>
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgLogo"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="28 September 2018"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtName"
+            app:layout_constraintStart_toStartOf="@+id/txtName" app:layout_constraintTop_toBottomOf="@+id/txtName">
+            <TextView
+                android:id="@+id/txtSeasonStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="2019-02-05"
+                android:textSize="14sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/strip" android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/txtSeasonEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="2019-07-18"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
