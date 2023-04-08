@@ -1,6 +1,5 @@
 package com.info.footballlive.rest
 
-import android.util.Log
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -11,11 +10,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 class FootballApiService {
 
     companion object {
-        val API_KEY_NAME = "X-RapidAPI-Key"
-        val API_KEY_VALUE = "ffc7cb9150msh0ace49dc23a5bcap1171c7jsn9f359211097a"
+        private const val API_KEY_VALUE = "ffc7cb9150msh0ace49dc23a5bcap1171c7jsn9f359211097a"
 //        val API_KEY_VALUE = "7251606d19mshaa8083621fe197ep198df5jsn309582146336"
-
-        val BASE_URL = "https://api-football-v1.p.rapidapi.com/v3/"
+        private const val BASE_URL = "https://api-football-v1.p.rapidapi.com/"
 
         fun getClient() : Retrofit {
 
@@ -34,7 +31,7 @@ class FootballApiService {
                     }
                     .build()
 
-            var gson = GsonBuilder()
+            val gson = GsonBuilder()
                     .registerTypeAdapterFactory(ItemTypeAdapterFactory())
                     .create()
 

@@ -4,10 +4,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.request.RequestOptions
 import com.info.footballlive.R
 import com.info.footballlive.rest.model.Country
 import com.info.footballlive.rest.model.Player
+import com.info.footballlive.utils.GlideApp
+import kotlinx.android.synthetic.main.item_country.view.*
 import kotlinx.android.synthetic.main.item_player.view.*
+import kotlinx.android.synthetic.main.item_player.view.imgPhoto
+import kotlinx.android.synthetic.main.item_player.view.txtName
 
 class PlayerAdapter(private val mPlayerList: List<Player>,
                     private val mListener: (Player) -> Unit) : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
@@ -24,8 +29,14 @@ class PlayerAdapter(private val mPlayerList: List<Player>,
     class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
         fun bind(player: Player, listener: (Player) -> Unit) {
 
-            itemView.txtName.text = player.player_name
-
+            itemView.txtName.text = player.name
+            GlideApp.with(itemView)
+                .load(player.photo)
+                .apply(
+                    RequestOptions()
+                    .placeholder(R.drawable.loading_animation)
+                    .error(R.drawable.ic_broken_image))
+                .into(itemView.imgPhoto)
             itemView.setOnClickListener { listener(player) }
         }
     }

@@ -6,12 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.request.RequestOptions
 import com.info.footballlive.R
-import com.info.footballlive.rest.model.Standing
+import com.info.footballlive.rest.model.StandingModel
 import com.info.footballlive.utils.GlideApp
 import kotlinx.android.synthetic.main.item_standing.view.*
 
-class StandingAdapter(private val mStandingList: List<Standing._Standing>,
-                      private val mListener: (Standing._Standing) -> Unit) : RecyclerView.Adapter<StandingAdapter.ViewHolder>() {
+class StandingAdapter(private val mStandingList: List<StandingModel.Standings>,
+                      private val mListener: (StandingModel.Standings) -> Unit) : RecyclerView.Adapter<StandingAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_standing, parent, false))
     }
@@ -23,7 +23,7 @@ class StandingAdapter(private val mStandingList: List<Standing._Standing>,
     }
 
     class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(standing: Standing._Standing, listener: (Standing._Standing) -> Unit) {
+        fun bind(standing: StandingModel.Standings, listener: (StandingModel.Standings) -> Unit) {
 
             itemView.txtRank.text = standing.rank.toString()
             itemView.txtTeamName.text = standing.league?.name

@@ -57,7 +57,7 @@ class PlayersFragment : Fragment(), PlayersContract.View {
         rvPlayerList.layoutManager = GridLayoutManager(context, 3)
         rvPlayerList.addItemDecoration(GridItemDecoration(16, 3))
         mAdapter = PlayerAdapter(mPlayerList) {
-            context?.startActivity<PlayerDetailActivity>(PlayerDetailActivity.ARG_PLAYER_ID to it.player_id)
+            context?.startActivity<PlayerDetailActivity>(PlayerDetailActivity.ARG_PLAYER_ID to it.id)
         }
         rvPlayerList.adapter = mAdapter
 
@@ -78,7 +78,7 @@ class PlayersFragment : Fragment(), PlayersContract.View {
         rvPlayerList.show()
     }
 
-    override fun display(playerList: List<Player>) {
+    override fun display(playerList: ArrayList<Player>) {
         if (playerList.isEmpty()) {
             Toast.makeText(context, "Can not pull the player list", Toast.LENGTH_SHORT).show()
         }

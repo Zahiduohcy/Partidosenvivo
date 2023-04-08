@@ -7,34 +7,35 @@ import retrofit2.http.GET
 import com.info.footballlive.rest.model.fixturedetail.FixtureDetail
 import com.info.footballlive.rest.model.fixturedetail.FixtureModel
 import com.info.footballlive.rest.model.fixturedetail.LeagueModel
+import com.info.footballlive.rest.model.fixturedetail.PlayerModel
 import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface FootballRest {
 
     // common
-    @GET("countries")
+    @GET("/v3/countries")
     fun getCountries() : Flowable<CountryModel>
 
-    @GET("seasons")
+    @GET("/v3/seasons")
     fun getSeasons() : Flowable<List<Int>>
 
     // leagues
-    @GET("leagues")
+    @GET("/v3/leagues")
     fun getLeagues(@Query("code") countryCode: String) : Flowable<LeagueModel>
 
-    @GET("leagues")
+    @GET("/v3/leagues")
     fun getGlobalLeagues() : Flowable<LeagueModel>
 
     // standings
-    @GET("standings")
-    fun getStandings(@Query("league") league_id: Int, @Query("season") season: Int) : Flowable<List<Standing>>
+    @GET("/v3/standings")
+    fun getStandings(@Query("league") league_id: Int, @Query("season") season: Int) : Flowable<StandingModel>
 
     // fixtures
-    @GET("fixtures")
+    @GET("/v3/fixtures")
     fun getFixtures(@Query("league") league_id: Int, @Query("season") season: Int) : Flowable<FixtureModel>
 
-    @GET("fixtures")
+    @GET("/v3/fixtures")
     fun getFixtureDetail(@Query("id") fixture_id: Int) : Flowable<FixtureDetail>
 
     // teams
@@ -45,8 +46,8 @@ interface FootballRest {
     fun getTeamStatistics(@Path("league_id") league_id: Int, @Path("team_id") team_id: Int) : Flowable<TeamStatistics>
 
     // players
-    @GET("players/squad/{team_id}/2018-2019")
-    fun getPlayers(@Path("team_id") team_id: Int) : Flowable<List<Player>>
+    @GET("/v3/players/squads")
+    fun getPlayers(@Query("team") team_id: Int) : Flowable<PlayerModel>
 
     @GET("players/player/{player_id}")
     fun getPlayerDetail(@Path("player_id") player_id: Int) : Flowable<List<PlayerDetail>>

@@ -10,10 +10,10 @@ data class Standing(
     data class League(
         var id: Int?,
         var name: String?,
-        var country: Country?,
+        var country: String?,
         var logo: String?,
         var flag: String?,
-        var season: String?,
+        var season: Int?,
         var standings: List<_Standing>?
     )
 

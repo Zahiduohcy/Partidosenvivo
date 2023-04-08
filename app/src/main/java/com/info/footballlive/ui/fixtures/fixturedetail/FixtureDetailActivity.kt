@@ -90,7 +90,7 @@ class FixtureDetailActivity : AppCompatActivity(), FixtureDetailContract.View {
             txtRound.text = fixtureDetail.league?.round
             txtStatus.text = fixtureDetail.fixture?.status?.long
             txtVenue.text = fixtureDetail.fixture?.venue?.name
-
+            if(fixtureDetail.lineups.size>0)
             fixtureDetail.lineups[0].let {
                 // Formation
                 homeFormation.text = it?.formation
@@ -104,7 +104,7 @@ class FixtureDetailActivity : AppCompatActivity(), FixtureDetailContract.View {
                 // substitutes
                 homeSubstitutes.text = it?.substitutes?.joinToString("\n") { it?.player?.name!! }
             }
-
+            if(fixtureDetail.lineups.size>0)
             fixtureDetail.lineups[1].let{
                 // Formation
                 awayFormation.text = it?.formation

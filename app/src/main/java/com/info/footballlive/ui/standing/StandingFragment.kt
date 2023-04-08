@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -17,8 +16,8 @@ import com.info.footballlive.R
 import com.info.footballlive.extensions.hide
 import com.info.footballlive.extensions.show
 import com.info.footballlive.rest.model.Standing
+import com.info.footballlive.rest.model.StandingModel
 import com.info.footballlive.ui.adapter.StandingAdapter
-import com.info.footballlive.utils.GridItemDecoration
 import kotlinx.android.synthetic.main.fragment_standing.*
 
 class StandingFragment : Fragment(), StandingContract.View {
@@ -38,13 +37,14 @@ class StandingFragment : Fragment(), StandingContract.View {
     private var mSeason: Int? = null
     private lateinit var mPresenter: StandingPresenter
     private lateinit var mAdapter: StandingAdapter
-    private var mStandingList: MutableList<Standing._Standing> = mutableListOf()
-    private var mLeague: MutableLiveData<Standing.League> = MutableLiveData()
+    private var mStandingList: MutableList<StandingModel.Standings> = mutableListOf()
+    private var mLeague: MutableLiveData<StandingModel.Standings> = MutableLiveData()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             mLeagueId = it.getInt(ARG_LEAGUE_ID)
+            mSeason = it.getInt(ARG_SEASON)
         }
     }
 
@@ -80,17 +80,19 @@ class StandingFragment : Fragment(), StandingContract.View {
         rvStandingList.show()
     }
 
-    override fun display(standing: Standing?) {
-        if (standing!=null) {
+    override fun display(standingList: StandingModel.Response?) {
+        if (standingList !=null) {
             Toast.makeText(context, "Can not pull the standing list", Toast.LENGTH_SHORT).show()
         }
-        standing?.league?.standings?.forEach{
-            val league = standing.league;
-            var _league = Standing._League(league?.id, league?.name, league?.country, league?.logo, league?.flag, league?.season )
-            it.league = _league
+        val league = standingList?.league;
+
+        standingList?.league?.standings?.get(0)?.forEach{
+                val _league = StandingModel.League(league?.id, league?.name, league?.country, league?.logo, league?.flag, league?.season )
+                it.league = _league
+
         }
         mStandingList.clear()
-        standing?.league?.standings?.let { mStandingList.addAll(it) }
+        standingList?.league?.standings?.get(0)?.let { mStandingList.addAll(it) }
         mAdapter.notifyDataSetChanged()
     }
 

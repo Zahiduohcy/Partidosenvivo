@@ -2,6 +2,7 @@ package com.info.footballlive.ui.standing
 
 import com.info.footballlive.rest.FootballApi
 import com.info.footballlive.rest.model.Standing
+import com.info.footballlive.rest.model.StandingModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
@@ -16,15 +17,14 @@ class StandingPresenter(private val mView: StandingContract.View) : StandingCont
         compositeDisposable.add(FootballApi.retrofitService.getStandings(leagueId, season)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
-                .subscribeWith(object : ResourceSubscriber<List<Standing>>() {
+                .subscribeWith(object : ResourceSubscriber<StandingModel>() {
                     override fun onComplete() {
                         mView.hideLoading()
                     }
 
-                    override fun onNext(t: List<Standing>?) {
+                    override fun onNext(t: StandingModel?) {
                         t?.let {
-                            if (it.isNotEmpty())
-                                mView.display(it[0])
+                                mView.display(it.response[0])
                         }
                     }
 

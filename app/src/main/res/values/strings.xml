@@ -20,10 +20,10 @@
     <string name="player2"></string>
 
     <!-- AdMob ad unit IDs -->
-    <string name="admob_app_id">ca-app-pub-6177861056491607~6738811390</string>
-    <string name="banner_home_footer">ca-app-pub-6177861056491607/2349916347</string>
-    <string name="interstitial_full_screen">ca-app-pub-6177861056491607/3673664354</string>
-    <string name="rewarded_video">ca-app-pub-6177861056491607/1047501013</string>
+    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="rewarded_video">ca-app-pub-3940256099942544/5224354917</string>
 
     <!--test ads-->
     <!--<string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>-->

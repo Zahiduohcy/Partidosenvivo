@@ -11,6 +11,7 @@ data class Team(
     var logo: String?,
     var name: String?,
     var team_id: Int?,
+    var id: Int?,
     var venue_address: String?,
     var venue_capacity: Int?,
     var venue_city: String?,
