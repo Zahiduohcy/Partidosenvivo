@@ -170,6 +170,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="8dp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -256,25 +257,34 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="4dp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginVertical="8dp"
                         android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
+                        <LinearLayout
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="4dp"
-                            android:gravity="center"
-                            android:text="Formation"
-                            android:textColor="@android:color/black"/>
+                            android:background="@drawable/layout_rounded_white"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:gravity="center"
+                                android:text="Formation"
+                                android:textColor="@android:color/black"/>
+                        </LinearLayout>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:layout_marginTop="4dp"
+                            android:paddingHorizontal="@dimen/layout_margin_16dp"
+                            >
                             <TextView
                                 android:id="@+id/homeFormation"
                                 android:layout_width="0dp"
@@ -287,7 +297,7 @@
                             <View
                                 android:layout_width="1dp"
                                 android:layout_height="match_parent"
-                                android:background="@android:color/darker_gray"/>
+                                android:background="@color/white"/>
                             <TextView
                                 android:id="@+id/awayFormation"
                                 android:layout_width="0dp"
@@ -303,32 +313,43 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
+                        <LinearLayout
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="4dp"
-                            android:gravity="center"
-                            android:text="Goal Keeper"
-                            android:textColor="@android:color/black"/>
+                            android:background="@drawable/layout_rounded_white"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:gravity="center"
+                                android:text="Goal Keeper"
+
+                                android:textColor="@android:color/black"/>
+                        </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="horizontal">
-                            <TextView
+                            android:orientation="horizontal"
+                            android:layout_marginTop="4dp"
+                            android:paddingHorizontal="@dimen/layout_margin_16dp"
+                            >
+                            <LinearLayout
                                 android:id="@+id/homeGoalKeeper"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
                                 android:layout_marginBottom="2dp"
                                 android:layout_weight="1"
+                                android:orientation="vertical"
                                 android:gravity="start|top"
                                 android:text="@string/player1"/>
                             <View
                                 android:layout_width="1dp"
                                 android:layout_height="match_parent"
-                                android:background="@android:color/darker_gray"/>
-                            <TextView
+                                android:background="@color/white"/>
+                            <LinearLayout
                                 android:id="@+id/awayGoalKeeper"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -336,6 +357,8 @@
                                 android:layout_marginBottom="2dp"
                                 android:layout_weight="1"
                                 android:gravity="top|end"
+                                android:orientation="vertical"
+
                                 android:text="@string/player2"/>
                         </LinearLayout>
                     </LinearLayout>
@@ -343,38 +366,52 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
+                        <LinearLayout
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="4dp"
-                            android:gravity="center"
-                            android:text="Defense"
-                            android:textColor="@android:color/black"/>
+                            android:background="@drawable/layout_rounded_white"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:gravity="center"
+                                android:text="Defense"
+                                android:textColor="@android:color/black"/>
+                        </LinearLayout>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="horizontal">
-                            <TextView
+                            android:orientation="horizontal"
+                            android:layout_marginTop="4dp"
+                            android:paddingHorizontal="@dimen/layout_margin_16dp"
+                            >
+                            <LinearLayout
                                 android:id="@+id/homeDefense"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
                                 android:layout_marginBottom="2dp"
                                 android:layout_weight="1"
+                                android:orientation="vertical"
+
                                 android:gravity="start|top"
                                 android:text="@string/player34"/>
                             <View
                                 android:layout_width="1dp"
                                 android:layout_height="match_parent"
-                                android:background="@android:color/darker_gray"/>
-                            <TextView
+                                android:background="@color/white"/>
+                            <LinearLayout
                                 android:id="@+id/awayDefense"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
                                 android:layout_marginBottom="2dp"
                                 android:layout_weight="1"
+                                android:orientation="vertical"
+
                                 android:gravity="top|end"
                                 android:text="@string/player567"/>
                         </LinearLayout>
@@ -383,38 +420,50 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
+                        <LinearLayout
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="4dp"
-                            android:gravity="center"
-                            android:text="Midfield"
-                            android:textColor="@android:color/black"/>
+                            android:background="@drawable/layout_rounded_white"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:gravity="center"
+                                android:text="Midfield"
+
+
+                                android:textColor="@android:color/black"/>
+                        </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="horizontal">
-                            <TextView
+                            android:orientation="horizontal"
+                            android:layout_marginTop="4dp"
+                            android:paddingHorizontal="@dimen/layout_margin_16dp"
+                            >
+                            <LinearLayout
                                 android:id="@+id/homeMidfield"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
                                 android:layout_marginBottom="2dp"
                                 android:layout_weight="1"
-                                android:gravity="start|top"
+                                android:gravity="start|top"                                android:orientation="vertical"
                                 android:text="@string/player567"/>
                             <View
                                 android:layout_width="1dp"
                                 android:layout_height="match_parent"
-                                android:background="@android:color/darker_gray"/>
-                            <TextView
+                                android:background="@color/white"/>
+                            <LinearLayout
                                 android:id="@+id/awayMidfield"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
                                 android:layout_marginBottom="2dp"
-                                android:layout_weight="1"
+                                android:layout_weight="1"                                android:orientation="vertical"
+
                                 android:gravity="top|end"
                                 android:text="@string/player34"/>
                         </LinearLayout>
@@ -423,38 +472,52 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="4dp"
-                            android:gravity="center"
-                            android:text="Forward"
-                            android:textColor="@android:color/black"/>
                         <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/layout_rounded_white"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:gravity="center"
+                                android:text="Forward"
+
+
+                                android:textColor="@android:color/black"/>
+                        </LinearLayout>
+                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="horizontal">
-                            <TextView
+                            android:orientation="horizontal"
+                             android:layout_marginTop="4dp"
+                             android:paddingHorizontal="@dimen/layout_margin_16dp"
+                             >
+                            <LinearLayout
                                 android:id="@+id/homeForward"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
                                 android:layout_marginBottom="2dp"
                                 android:layout_weight="1"
+                                android:orientation="vertical"
                                 android:gravity="start|top"
                                 android:text="@string/player567"/>
                             <View
                                 android:layout_width="1dp"
                                 android:layout_height="match_parent"
-                                android:background="@android:color/darker_gray"/>
-                            <TextView
+                                android:background="@color/white"/>
+                            <LinearLayout
                                 android:id="@+id/awayForward"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
                                 android:layout_marginBottom="2dp"
                                 android:layout_weight="1"
+                                android:orientation="vertical"
+
                                 android:gravity="top|end"
                                 android:text="@string/player34"/>
                         </LinearLayout>
@@ -463,19 +526,31 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
+                        <LinearLayout
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="4dp"
-                            android:gravity="center"
-                            android:text="Substitutes"
-                            android:textColor="@android:color/black"/>
+                            android:background="@drawable/layout_rounded_white"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:gravity="center"
+                                android:text="Substitutes"
+
+
+                                android:textColor="@android:color/black"/>
+                        </LinearLayout>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="horizontal">
-                            <TextView
+                            android:orientation="horizontal"
+                            android:layout_marginTop="4dp"
+                            android:paddingHorizontal="@dimen/layout_margin_16dp"
+                            >
+                            <LinearLayout
                                 android:id="@+id/homeSubstitutes"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -483,14 +558,17 @@
                                 android:layout_marginBottom="2dp"
                                 android:layout_weight="1"
                                 android:gravity="start|top"
+                                android:orientation="vertical"
+
                                 android:text="@string/player567"/>
                             <View
                                 android:layout_width="1dp"
                                 android:layout_height="match_parent"
-                                android:background="@android:color/darker_gray"/>
-                            <TextView
+                                android:background="@color/white"/>
+                            <LinearLayout
                                 android:id="@+id/awaySubstitutes"
                                 android:layout_width="0dp"
+                                android:orientation="vertical"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
                                 android:layout_marginBottom="2dp"
@@ -538,6 +616,8 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:paddingVertical="8dp"
+
                             android:orientation="horizontal">
                             <TextView
                                 android:layout_width="0dp"
@@ -568,7 +648,10 @@
                                 android:text="Type"
                                 android:textColor="@android:color/black"/>
                         </LinearLayout>
-
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#0000" />
                         <!--<include layout="@layout/item_fixture_event"/>-->
 
                     </LinearLayout>

@@ -21,13 +21,15 @@
 
         <ImageView
             android:id="@+id/imgLogo"
-            android:layout_width="45dp" android:layout_height="wrap_content"
+            android:layout_width="45dp"
+            android:layout_height="55dp"
             android:adjustViewBounds="true"
-            android:scaleType="fitEnd"
+            android:scaleType="centerInside"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.533" app:srcCompat="@drawable/loading_animation"/>
+            app:layout_constraintVertical_bias="0.533"
+            app:srcCompat="@drawable/loading_animation"/>
         <TextView
             android:id="@+id/txtName"
             android:layout_width="wrap_content"
@@ -35,7 +37,7 @@
             android:layout_marginEnd="8dp"
             android:textColor="@android:color/black"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="20dp"
             app:layout_constraintStart_toEndOf="@id/imgLogo"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="28 September 2018"/>
@@ -45,12 +47,12 @@
             android:layout_marginTop="8dp"
             android:orientation="horizontal"
             android:paddingBottom="8dp"
-            app:layout_constraintEnd_toEndOf="@+id/txtName"
             app:layout_constraintStart_toStartOf="@+id/txtName" app:layout_constraintTop_toBottomOf="@+id/txtName">
             <TextView
                 android:id="@+id/txtSeasonStart"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:text="2019-02-05"
+                android:layout_height="wrap_content"
+                android:text="2019-02-05"
                 android:textSize="14sp"/>
             <TextView
                 android:layout_width="wrap_content"

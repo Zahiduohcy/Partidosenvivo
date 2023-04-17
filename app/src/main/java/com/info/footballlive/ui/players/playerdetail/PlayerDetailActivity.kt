@@ -123,7 +123,7 @@ class PlayerDetailActivity : AppCompatActivity(), PlayerDetailContract.View {
 
     override fun onDestroy() {
         if (mRewardedVideoAd.isLoaded) {
-            mRewardedVideoAd.show()
+//            mRewardedVideoAd.show()
         }
 
         super.onDestroy()

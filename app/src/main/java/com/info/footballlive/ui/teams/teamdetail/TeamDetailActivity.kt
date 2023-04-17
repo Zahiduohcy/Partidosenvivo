@@ -86,7 +86,7 @@ class TeamDetailActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         if (mInterstitialAd.isLoaded) {
-            mInterstitialAd.show()
+//            mInterstitialAd.show()
         }
 
         super.onDestroy()

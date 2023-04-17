@@ -4,119 +4,162 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="112dp"
     android:layout_marginStart="6dp"
     android:layout_marginTop="3dp"
     android:layout_marginEnd="6dp"
     android:layout_marginBottom="3dp"
     android:clickable="true"
     android:focusable="true"
-    android:foreground="?attr/selectableItemBackground" app:cardBackgroundColor="@color/colorCardBackground"
-    app:cardCornerRadius="7dp" app:cardElevation="8dp">
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/colorCardBackground"
+    app:cardCornerRadius="7dp"
+    app:cardElevation="8dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp">
+        android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/txtDateFixture"
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2018-1-1"
-            android:textColor="@color/colorTextExtraLight"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent"
-            tools:layout_conversion_wrapHeight="50" tools:layout_conversion_wrapWidth="0"/>
+            android:layout_height="100dp"
+            android:id="@+id/teamHome"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="8dp"
+            android:gravity="center_vertical"
+            android:layout_alignParentStart="true">
 
-        <TextView
-            android:id="@+id/txtHomeTeam"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/layout_margin_16dp"
-            android:gravity="end"
-            android:text="@string/team_a"
-            android:textColor="@color/colorTextLight"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/score_layout"
-            app:layout_constraintRight_toLeftOf="@id/score_layout"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.6"
-            tools:ignore="RelativeOverlap"
-            tools:layout_conversion_wrapHeight="53"
-            tools:layout_conversion_wrapWidth="134"/>
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/loading_animation"
+                android:id="@+id/homeLogo"/>
+            <FrameLayout
+                android:layout_width="80dp"
+                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content"
+                android:background="#ccffffff"
+                android:padding="4dp">
+                <TextView
+                    android:id="@+id/txtHomeTeam"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/layout_margin_16dp"
+                    android:gravity="center"
+                    android:text="@string/team_a"
+                    android:textColor="@color/colorTextLight"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/score_layout"
+                    app:layout_constraintRight_toLeftOf="@id/score_layout"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6"
+                    tools:ignore="RelativeOverlap"
+                    tools:layout_conversion_wrapHeight="53"
+                    tools:layout_conversion_wrapWidth="134"/>
+            </FrameLayout>
+        </RelativeLayout>
 
         <LinearLayout
-            android:id="@+id/score_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="12dp"
-            android:background="@drawable/layout_rounded_white" android:clickable="false"
-            android:orientation="horizontal"
-            android:padding="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent"
-            tools:layout_conversion_wrapHeight="101" tools:layout_conversion_wrapWidth="166">
-            <TextView
-                android:id="@+id/txtHomeScore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/card_margin_y"
-                android:layout_marginRight="@dimen/card_margin_y"
-                android:textColor="@color/colorTextDark"
-                android:textSize="21sp"
-                android:textStyle="bold"/>
+            android:layout_gravity="center_vertical"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
 
-            <TextView
+            <LinearLayout
+                android:id="@+id/score_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:fontFamily="sans-serif-thin"
-                android:text="@string/strip"
-                android:textColor="@color/colorTextLight"
-                android:textSize="21sp"
-                android:textStyle="bold"
-                tools:ignore="UnusedAttribute"/>
+                android:background="@drawable/layout_rounded_white" android:clickable="false"
+                android:orientation="horizontal"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/txtHomeScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/card_margin_y"
+                    android:layout_marginRight="@dimen/card_margin_y"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="21sp"
+                    android:textStyle="bold"/>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="@string/strip"
+                    android:textColor="@color/colorTextLight"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    tools:ignore="UnusedAttribute"/>
+
+                <TextView
+                    android:id="@+id/txtAwayScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="21sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
             <TextView
-                android:id="@+id/txtAwayScore"
+                android:id="@+id/txtDateFixture"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:textColor="@color/colorTextDark"
-                android:textSize="21sp"
-                android:textStyle="bold"/>
+                android:text="2018-1-1"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/colorTextExtraLight"/>
+
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/score_layout"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.6">
-            <TextView
-                android:id="@+id/txtAwayTeam"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_marginLeft="@dimen/layout_margin_16dp"
-                android:gravity="start"
-                android:text="@string/team_b"
-                android:textColor="@color/colorTextLight"
-                android:textSize="15sp"
-                tools:layout_conversion_wrapHeight="53"
-                tools:layout_conversion_wrapWidth="133"/>
-        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:id="@+id/teamAway"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="8dp"
+            android:gravity="center_vertical">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/loading_animation"
+                android:id="@+id/awayLogo"/>
+            <FrameLayout
+                android:layout_width="80dp"
+                android:layout_alignParentBottom="true"
+                android:background="#ccffffff"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtAwayTeam"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/layout_margin_16dp"
+                    android:gravity="center"
+                    android:text="@string/team_a"
+                    android:textColor="@color/colorTextLight"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/score_layout"
+                    app:layout_constraintRight_toLeftOf="@id/score_layout"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6"
+                    tools:ignore="RelativeOverlap"
+                    tools:layout_conversion_wrapHeight="53"
+                    tools:layout_conversion_wrapWidth="134"/>
+            </FrameLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
 
 </androidx.cardview.widget.CardView>

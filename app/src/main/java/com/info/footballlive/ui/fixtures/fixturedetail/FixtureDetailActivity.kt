@@ -13,6 +13,7 @@ import com.info.footballlive.rest.model.fixturedetail.FixtureDetail
 import com.info.footballlive.utils.GlideApp
 import kotlinx.android.synthetic.main.activity_fixture_detail.*
 import kotlinx.android.synthetic.main.item_fixture_event.view.*
+import kotlinx.android.synthetic.main.item_lineup.view.*
 
 class FixtureDetailActivity : AppCompatActivity(), FixtureDetailContract.View {
 
@@ -96,13 +97,63 @@ class FixtureDetailActivity : AppCompatActivity(), FixtureDetailContract.View {
                 homeFormation.text = it?.formation
 
                 // Goal Keeper, Defense, Midfield, Forward
-                homeGoalKeeper.text = it?.startXI?.filter { it?.player?.pos == "G" }?.joinToString("\n") { it?.player?.name!! }
-                homeDefense.text = it?.startXI?.filter { it?.player?.pos == "D" }?.joinToString("\n") { it?.player?.name!! }
-                homeMidfield.text = it?.startXI?.filter { it?.player?.pos == "M" }?.joinToString("\n") { it?.player?.name!! }
-                homeForward.text = it?.startXI?.filter { it?.player?.pos == "F" }?.joinToString("\n") { it?.player?.name!! }
+                it?.startXI?.filter { it?.player?.pos == "G" }?.forEachIndexed{ index, itt ->
+                    val event = layoutInflater.inflate(R.layout.item_lineup, null).apply {
+                        this.player_name.text = itt?.player?.name
+                    }
+                    if(index%2==0){
+                        event.setBackgroundResource(R.drawable.divider)
+                    }else{
+                        event.setBackgroundResource(R.drawable.white_bg)
+                    }
+                    homeGoalKeeper.addView(event)
+                }
+                it?.startXI?.filter { it?.player?.pos == "D" }?.forEachIndexed{ index, itt ->
+                    val event = layoutInflater.inflate(R.layout.item_lineup, null).apply {
+                        this.player_name.text = itt?.player?.name
+                    }
+                    if(index%2==0){
+                        event.setBackgroundResource(R.drawable.divider)
+                    }else{
+                        event.setBackgroundResource(R.drawable.white_bg)
+                    }
+                    homeDefense.addView(event)
+                }
+                it?.startXI?.filter { it?.player?.pos == "M" }?.forEachIndexed{ index, itt ->
+                    val event = layoutInflater.inflate(R.layout.item_lineup, null).apply {
+                        this.player_name.text = itt?.player?.name
+                    }
+                    if(index%2==0){
+                        event.setBackgroundResource(R.drawable.divider)
+                    }else{
+                        event.setBackgroundResource(R.drawable.white_bg)
+                    }
+                    homeMidfield.addView(event)
+                }
 
+                it?.startXI?.filter { it?.player?.pos == "F" }?.forEachIndexed{ index, itt ->
+                    val event = layoutInflater.inflate(R.layout.item_lineup, null).apply {
+                        this.player_name.text = itt?.player?.name
+                    }
+                    if(index%2==0){
+                        event.setBackgroundResource(R.drawable.divider)
+                    }else{
+                        event.setBackgroundResource(R.drawable.white_bg)
+                    }
+                    homeForward.addView(event)
+                }
                 // substitutes
-                homeSubstitutes.text = it?.substitutes?.joinToString("\n") { it?.player?.name!! }
+                it?.substitutes?.forEachIndexed{ index, itt ->
+                    val event = layoutInflater.inflate(R.layout.item_lineup, null).apply {
+                        this.player_name.text = itt?.player?.name
+                    }
+                    if(index%2==0){
+                        event.setBackgroundResource(R.drawable.divider)
+                    }else{
+                        event.setBackgroundResource(R.drawable.white_bg)
+                    }
+                    homeSubstitutes.addView(event)
+                }
             }
             if(fixtureDetail.lineups.size>0)
             fixtureDetail.lineups[1].let{
@@ -110,22 +161,77 @@ class FixtureDetailActivity : AppCompatActivity(), FixtureDetailContract.View {
                 awayFormation.text = it?.formation
 
                 // Goal Keeper, Defense, Midfield, Forward
-                awayGoalKeeper.text = it?.startXI?.filter { it?.player?.pos == "G" }?.joinToString("\n") { it?.player?.name!! }
-                awayDefense.text = it?.startXI?.filter { it?.player?.pos == "D" }?.joinToString("\n") { it?.player?.name!! }
-                awayMidfield.text = it?.startXI?.filter { it?.player?.pos == "M" }?.joinToString("\n") { it?.player?.name!! }
-                awayForward.text = it?.startXI?.filter { it?.player?.pos == "F" }?.joinToString("\n") { it?.player?.name!! }
+                it?.startXI?.filter { it?.player?.pos == "G" }?.forEachIndexed{ index, itt ->
+                    val event = layoutInflater.inflate(R.layout.item_lineup, null).apply {
+                        this.player_name.text = itt?.player?.name
+                    }
+                    if(index%2==1){
+                        event.setBackgroundResource(R.drawable.divider)
+                    }else{
+                        event.setBackgroundResource(R.drawable.white_bg)
+                    }
+                    awayGoalKeeper.addView(event)
+                }
+                it?.startXI?.filter { it?.player?.pos == "D" }?.forEachIndexed{ index, itt ->
+                    val event = layoutInflater.inflate(R.layout.item_lineup, null).apply {
+                        this.player_name.text = itt?.player?.name
+                    }
+                    if(index%2==1){
+                        event.setBackgroundResource(R.drawable.divider)
+                    }else{
+                        event.setBackgroundResource(R.drawable.white_bg)
+                    }
+                    awayDefense.addView(event)
+                }
+                it?.startXI?.filter { it?.player?.pos == "M" }?.forEachIndexed{ index, itt ->
+                    val event = layoutInflater.inflate(R.layout.item_lineup, null).apply {
+                        this.player_name.text = itt?.player?.name
+                    }
+                    if(index%2==1){
+                        event.setBackgroundResource(R.drawable.divider)
+                    }else{
+                        event.setBackgroundResource(R.drawable.white_bg)
+                    }
+                    awayMidfield.addView(event)
+                }
 
+                it?.startXI?.filter { it?.player?.pos == "F" }?.forEachIndexed{ index, itt ->
+                    val event = layoutInflater.inflate(R.layout.item_lineup, null).apply {
+                        this.player_name.text = itt?.player?.name
+                    }
+                    if(index%2==1){
+                        event.setBackgroundResource(R.drawable.divider)
+                    }else{
+                        event.setBackgroundResource(R.drawable.white_bg)
+                    }
+                    awayForward.addView(event)
+                }
                 // substitutes
-                awaySubstitutes.text = it?.substitutes?.joinToString("\n") { it?.player?.name!! }
+                it?.substitutes?.forEachIndexed{ index, itt ->
+                    val event = layoutInflater.inflate(R.layout.item_lineup, null).apply {
+                        this.player_name.text = itt?.player?.name
+                    }
+                    if(index%2==1){
+                        event.setBackgroundResource(R.drawable.divider)
+                    }else{
+                        event.setBackgroundResource(R.drawable.white_bg)
+                    }
+                    awaySubstitutes.addView(event)
+                }
             }
 
             // events
-            fixtureDetail.events?.forEach {
+            fixtureDetail.events?.forEachIndexed { index, it ->
                 val event = layoutInflater.inflate(R.layout.item_fixture_event, null).apply {
                     this.elapsed.text = it?.time?.elapsed.toString()
                     this.teamName.text = it?.team?.name
                     this.player.text = it?.player?.name
                     this.type.text = it?.type
+                }
+                if(index%2==1){
+                    event.setBackgroundResource(R.drawable.divider)
+                }else{
+                    event.setBackgroundResource(R.drawable.white_bg)
                 }
 
                 layout_fixture_events.addView(event)
@@ -135,7 +241,7 @@ class FixtureDetailActivity : AppCompatActivity(), FixtureDetailContract.View {
 
     override fun onDestroy() {
         if (mInterstitialAd.isLoaded) {
-            mInterstitialAd.show()
+//            mInterstitialAd.show()
         }
 
         super.onDestroy()

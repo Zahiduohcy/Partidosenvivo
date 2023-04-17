@@ -40,7 +40,7 @@ class CountriesActivity : AppCompatActivity(), CountriesContract.View {
         adView.loadAd(adRequest)
 
         // recycler view
-        rvCountryList.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
+        rvCountryList.layoutManager = GridLayoutManager (this,2, RecyclerView.VERTICAL, false)
         mAdapter = CountryAdapter(mCountryList) {
             startActivity<LeaguesActivity>(LeaguesActivity.ARG_COUNTRY_CODE to it.code)
         }
