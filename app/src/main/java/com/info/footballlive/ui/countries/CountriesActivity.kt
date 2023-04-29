@@ -63,7 +63,7 @@ class CountriesActivity : AppCompatActivity(), CountriesContract.View {
 
     override fun display(countryList: List<Country>) {
         if (countryList.isEmpty()) {
-            Toast.makeText(this, "Can not pull the country list", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this, "Can not pull the country list", Toast.LENGTH_SHORT).show()
         }
         mCountryList.clear()
 

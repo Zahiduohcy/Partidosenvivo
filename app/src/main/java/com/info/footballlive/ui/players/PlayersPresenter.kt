@@ -26,6 +26,7 @@ class PlayersPresenter(private val mView: PlayersContract.View) : PlayersContrac
 
                     override fun onNext(t: PlayerModel?) {
                         t?.let {
+                            if(it.response?.isNotEmpty() == true)
                             it.response?.get(0)?.players?.let { it1 -> mView.display(it1) }
                         }
                     }

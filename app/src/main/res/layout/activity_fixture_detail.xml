@@ -49,7 +49,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/card_margin_y"
                         android:layout_marginRight="@dimen/card_margin_y"
-                        android:text="0"
+                        android:text="@string/_0"
                         android:textColor="@color/colorCardBackground"
                         android:textSize="34sp"
                     />
@@ -70,7 +70,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:text="0"
+                        android:text="@string/_0"
                         android:textColor="@color/colorCardBackground"
                         android:textSize="34sp"
                     />
@@ -91,11 +91,10 @@
                     android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="@dimen/layout_margin_16dp"
-                    android:layout_marginLeft="@dimen/layout_margin_16dp"
                     android:layout_toStartOf="@+id/layout_score"
-                    android:layout_toLeftOf="@+id/layout_score"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_badge"/>
+                    android:src="@drawable/ic_badge"
+                    android:contentDescription="@string/empty" />
 
                 <TextView
                     android:id="@+id/txtHomeTeam"
@@ -103,9 +102,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/imgHomeLogo"
                     android:layout_alignEnd="@+id/imgHomeLogo"
-                    android:layout_alignRight="@+id/imgHomeLogo"
                     android:layout_marginStart="@dimen/layout_margin_16dp"
-                    android:layout_marginLeft="@dimen/layout_margin_16dp"
                     android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:text="@string/team_a"
@@ -119,10 +116,9 @@
                     android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
                     android:layout_marginEnd="@dimen/layout_margin_16dp"
-                    android:layout_marginRight="@dimen/layout_margin_16dp"
                     android:layout_toEndOf="@+id/layout_score"
-                    android:layout_toRightOf="@+id/layout_score"
                     android:scaleType="fitCenter"
+                    android:contentDescription="@string/empty"
                     android:src="@drawable/ic_badge"/>
 
                 <TextView
@@ -131,10 +127,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/imgHomeLogo"
                     android:layout_alignStart="@+id/imgAwayLogo"
-                    android:layout_alignLeft="@+id/imgAwayLogo"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="@dimen/layout_margin_16dp"
-                    android:layout_marginRight="@dimen/layout_margin_16dp"
                     android:gravity="center"
                     android:text="@string/team_b"
                     android:textColor="@color/colorBackground"
@@ -182,7 +176,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="Round"/>
+                            android:text="@string/round"/>
                         <TextView
                             android:id="@+id/txtRound"
                             android:layout_width="0dp"
@@ -201,7 +195,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="Status"/>
+                            android:text="@string/status"/>
                         <TextView
                             android:id="@+id/txtStatus"
                             android:layout_width="0dp"
@@ -220,7 +214,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="Venue"/>
+                            android:text="@string/venue"/>
                         <TextView
                             android:id="@+id/txtVenue"
                             android:layout_width="0dp"
@@ -245,7 +239,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/layout_margin_16dp"
                     android:layout_marginRight="@dimen/layout_margin_16dp"
-                    android:text="Lineups"
+                    android:text="@string/lineup"
                     android:textColor="@android:color/black"
                     android:textSize="15sp"/>
             </LinearLayout>
@@ -274,7 +268,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="8dp"
                                 android:gravity="center"
-                                android:text="Formation"
+                                android:text="@string/formation"
                                 android:textColor="@android:color/black"/>
                         </LinearLayout>
 
@@ -324,7 +318,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="8dp"
                                 android:gravity="center"
-                                android:text="Goal Keeper"
+                                android:text="@string/goal_keeper"
 
                                 android:textColor="@android:color/black"/>
                         </LinearLayout>
@@ -377,7 +371,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="8dp"
                                 android:gravity="center"
-                                android:text="Defense"
+                                android:text="@string/defence"
                                 android:textColor="@android:color/black"/>
                         </LinearLayout>
 
@@ -431,7 +425,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="8dp"
                                 android:gravity="center"
-                                android:text="Midfield"
+                                android:text="@string/midfield"
 
 
                                 android:textColor="@android:color/black"/>
@@ -483,7 +477,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="8dp"
                                 android:gravity="center"
-                                android:text="Forward"
+                                android:text="@string/forward"
 
 
                                 android:textColor="@android:color/black"/>
@@ -537,7 +531,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="8dp"
                                 android:gravity="center"
-                                android:text="Substitutes"
+                                android:text="@string/substitutes"
 
 
                                 android:textColor="@android:color/black"/>
@@ -593,7 +587,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/layout_margin_16dp"
                     android:layout_marginRight="@dimen/layout_margin_16dp"
-                    android:text="Events"
+                    android:text="@string/events"
                     android:textColor="@android:color/black"
                     android:textSize="15sp"/>
             </LinearLayout>
@@ -612,7 +606,8 @@
                         android:id="@+id/layout_fixture_events"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -624,28 +619,29 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center"
-                                android:text="Elapsed"
+                                android:text="@string/elapsed"
+                                android:textColor="@android:color/black"
+                                tools:ignore="TooManyViews" />
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:text="@string/team"
                                 android:textColor="@android:color/black"/>
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:gravity="center"
-                                android:text="Team"
-                                android:textColor="@android:color/black"/>
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="2"
-                                android:gravity="center"
-                                android:text="Player"
+                                android:text="@string/player"
                                 android:textColor="@android:color/black"/>
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center"
-                                android:text="Type"
+                                android:text="@string/type"
                                 android:textColor="@android:color/black"/>
                         </LinearLayout>
                         <View
@@ -667,6 +663,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_home_footer"/>"/>
+        ads:adUnitId="@string/banner_home_footer"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

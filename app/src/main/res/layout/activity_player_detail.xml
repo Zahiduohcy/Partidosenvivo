@@ -35,6 +35,7 @@
                     android:layout_height="90dp"
                     android:layout_marginStart="28dp"
                     android:layout_marginBottom="5dp"
+                    android:contentDescription="@string/empty"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:srcCompat="@drawable/ic_person"/>
@@ -88,7 +89,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center" android:text="Age"/>
+                            android:gravity="center" android:text="@string/age"/>
                         <TextView
                             android:id="@+id/txtAge"
                             android:layout_width="0dp"
@@ -105,7 +106,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center" android:text="Birth Date"/>
+                            android:gravity="center" android:text="@string/birth_date"/>
                         <TextView
                             android:id="@+id/txtBirthDate"
                             android:layout_width="0dp"
@@ -122,7 +123,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center" android:text="Birth Place"/>
+                            android:gravity="center" android:text="@string/birth_place"/>
                         <TextView
                             android:id="@+id/txtBirthPlace"
                             android:layout_width="0dp"
@@ -139,7 +140,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center" android:text="Birth Country"/>
+                            android:gravity="center" android:text="@string/birth_country"/>
                         <TextView
                             android:id="@+id/txtBirthCountry"
                             android:layout_width="0dp"
@@ -156,7 +157,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center" android:text="Nationality"/>
+                            android:gravity="center" android:text="@string/nationality"/>
                         <TextView
                             android:id="@+id/txtNationality"
                             android:layout_width="0dp"
@@ -182,7 +183,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" android:gravity="center"
-                            android:text="Weight (kg)"/>
+                            android:text="@string/weight_kg"/>
                         <TextView
                             android:id="@+id/txtWeight"
                             android:layout_width="match_parent"
@@ -203,7 +204,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" android:gravity="center"
-                            android:text="Height (m)"/>
+                            android:text="@string/height_m"/>
                         <TextView
                             android:id="@+id/txtHeight"
                             android:layout_width="match_parent"
@@ -234,12 +235,12 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Total"/>
+                            android:text="@string/total"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="On"/>
+                            android:text="@string/on"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
@@ -252,21 +253,21 @@
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_weight="1.3"
-                            android:gravity="center" android:text="Shots"/>
+                            android:gravity="center" android:text="@string/shots"/>
                         <TextView
                             android:id="@+id/txtShotsTotal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:id="@+id/txtShotsOn"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_weight="1"
@@ -294,17 +295,17 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Total"/>
+                            android:text="@string/total"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Conceded"/>
+                            android:text="@string/conceded"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Assists"/>
+                            android:text="@string/assists"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -313,28 +314,28 @@
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_weight="1.3"
-                            android:gravity="center" android:text="Goals"/>
+                            android:gravity="center" android:text="@string/goals"/>
                         <TextView
                             android:id="@+id/txtGoalsTotal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:id="@+id/txtGoalsConceded"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:id="@+id/txtGoalsAssists"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -358,12 +359,12 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Total"/>
+                            android:text="@string/total"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Accuracy"/>
+                            android:text="@string/accuracy"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
@@ -376,21 +377,21 @@
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_weight="1.3"
-                            android:gravity="center" android:text="Passes"/>
+                            android:gravity="center" android:text="@string/passes"/>
                         <TextView
                             android:id="@+id/txtPassesTotal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:id="@+id/txtPassesAccuracy"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_weight="1"
@@ -419,17 +420,17 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Total"/>
+                            android:text="@string/total"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Blocks"/>
+                            android:text="@string/blocks"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Interceptions"/>
+                            android:text="@string/interceptions"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -438,28 +439,29 @@
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_weight="1.3"
-                            android:gravity="center" android:text="Tackles"/>
+                            android:gravity="center" android:text="@string/tackles"
+                            tools:ignore="TooManyViews" />
                         <TextView
                             android:id="@+id/txtTacklesTotal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:id="@+id/txtTacklesBlocks"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:id="@+id/txtTacklesInterceptions"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -484,12 +486,12 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Total"/>
+                            android:text="@string/total"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Won"/>
+                            android:text="@string/won"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
@@ -503,21 +505,21 @@
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_weight="1.3"
-                            android:gravity="center" android:text="Duels"/>
+                            android:gravity="center" android:text="@string/duels"/>
                         <TextView
                             android:id="@+id/txtDuelsTotal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:id="@+id/txtDuelsWon"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_weight="1"
@@ -546,12 +548,12 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Attempts"/>
+                            android:text="@string/attempts"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Success"/>
+                            android:text="@string/success"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
@@ -565,21 +567,21 @@
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_weight="1.3"
-                            android:gravity="center" android:text="Dribbles"/>
+                            android:gravity="center" android:text="@string/dribbles"/>
                         <TextView
                             android:id="@+id/txtDribblesAttempts"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:id="@+id/txtDribblesSuccess"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_weight="1"
@@ -608,12 +610,12 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Drawn"/>
+                            android:text="@string/drawn"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Committed"/>
+                            android:text="@string/committed"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
@@ -627,21 +629,21 @@
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_weight="1.3"
-                            android:gravity="center" android:text="Fouls"/>
+                            android:gravity="center" android:text="@string/fouls"/>
                         <TextView
                             android:id="@+id/txtFoulsDrawn"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:id="@+id/txtFoulsCommitted"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_weight="1"
@@ -670,17 +672,17 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Yellow"/>
+                            android:text="@string/yellow"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="YelloRed"/>
+                            android:text="@string/yellored"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Red"/>
+                            android:text="@string/red"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -689,28 +691,28 @@
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_weight="1.3"
-                            android:gravity="center" android:text="Cards"/>
+                            android:gravity="center" android:text="@string/cards"/>
                         <TextView
                             android:id="@+id/txtCardsYellow"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:id="@+id/txtCardsYellowred"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:id="@+id/txtCardsRed"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -735,17 +737,17 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Success"/>
+                            android:text="@string/success"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Missed"/>
+                            android:text="@string/missed"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Saved"/>
+                            android:text="@string/saved"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -754,28 +756,28 @@
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_weight="1.3"
-                            android:gravity="center" android:text="Penalty"/>
+                            android:gravity="center" android:text="@string/penalty"/>
                         <TextView
                             android:id="@+id/txtPenaltySuccess"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:id="@+id/txtPenaltyMissed"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:id="@+id/txtPenaltySaved"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -800,17 +802,17 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Appearences"/>
+                            android:text="@string/appearences"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Minutes Played"/>
+                            android:text="@string/minutes_played"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Lineups"/>
+                            android:text="@string/lineups"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -819,28 +821,28 @@
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_weight="1.3"
-                            android:gravity="center" android:text="Games"/>
+                            android:gravity="center" android:text="@string/games"/>
                         <TextView
                             android:id="@+id/txtGamesAppearences"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:id="@+id/txtGamesMinutesPlayed"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:id="@+id/txtGamesLineups"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -866,17 +868,17 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="In"/>
+                            android:text="@string/in"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Out"/>
+                            android:text="@string/out"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_gravity="center"
                             android:layout_weight="1" android:gravity="center"
-                            android:text="Bench"/>
+                            android:text="@string/bench"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -885,28 +887,28 @@
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" android:layout_weight="1.3"
-                            android:gravity="center" android:text="Substitutes"/>
+                            android:gravity="center" android:text="@string/substitutes"/>
                         <TextView
                             android:id="@+id/txtSubstitutesIn"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:id="@+id/txtSubstitutesOut"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                         <TextView
                             android:id="@+id/txtSubstitutesBench"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"/>
+                            android:text="@string/_0"/>
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -920,6 +922,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_home_footer"/>"/>
+        ads:adUnitId="@string/banner_home_footer"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

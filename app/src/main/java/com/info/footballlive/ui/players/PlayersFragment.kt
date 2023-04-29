@@ -80,7 +80,7 @@ class PlayersFragment : Fragment(), PlayersContract.View {
 
     override fun display(playerList: ArrayList<Player>) {
         if (playerList.isEmpty()) {
-            Toast.makeText(context, "Can not pull the player list", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(context, "Can not pull the player list", Toast.LENGTH_SHORT).show()
         }
         mPlayerList.clear()
         mPlayerList.addAll(playerList)

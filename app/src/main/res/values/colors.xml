@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FF0F0A20</color>
-    <color name="colorPrimaryDark">#FF0F0A20</color>
-    <color name="colorAccent">#F33C3C</color>
+    <color name="colorPrimary">#11788F</color>
+    <color name="colorPrimaryDark">#11788F</color>
+    <color name="colorAccent">#11788F</color>
 
     <color name="pass_match">#FF0F0A20</color>
     <color name="line_separator">#bfbcbc</color>

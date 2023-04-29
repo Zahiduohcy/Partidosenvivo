@@ -24,6 +24,7 @@ class StandingPresenter(private val mView: StandingContract.View) : StandingCont
 
                     override fun onNext(t: StandingModel?) {
                         t?.let {
+                            if(it.response.isNotEmpty())
                                 mView.display(it.response[0])
                         }
                     }

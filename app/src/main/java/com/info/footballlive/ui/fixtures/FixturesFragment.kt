@@ -84,7 +84,7 @@ class FixturesFragment : Fragment(), FixturesContract.View {
 
     override fun display(fixtureList: List<Fixture>) {
         if (fixtureList.isEmpty()) {
-            Toast.makeText(context, "Can not pull the fixture list", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(context, "Can not pull the fixture list", Toast.LENGTH_SHORT).show()
         }
         Collections.reverse(fixtureList)
 

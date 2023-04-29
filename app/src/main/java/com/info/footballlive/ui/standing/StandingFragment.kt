@@ -82,7 +82,7 @@ class StandingFragment : Fragment(), StandingContract.View {
 
     override fun display(standingList: StandingModel.Response?) {
         if (standingList !=null) {
-            Toast.makeText(context, "Can not pull the standing list", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(context, "Can not pull the standing list", Toast.LENGTH_SHORT).show()
         }
         val league = standingList?.league;
 

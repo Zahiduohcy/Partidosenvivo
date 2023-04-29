@@ -6,7 +6,7 @@ apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.info.footballlive"
+        applicationId "com.envivo.futbolenvivoyendirectopartidos"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 3

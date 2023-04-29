@@ -60,7 +60,7 @@ class TeamStatisticsFragment : Fragment(), TeamStatisticsContract.View {
 
     override fun display(teamStatistics: TeamStatistics?) {
         if (teamStatistics == null) {
-            Toast.makeText(context, "Can not pull the team statistics", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(context, "Can not pull the team statistics", Toast.LENGTH_SHORT).show()
             return
         }
         ////

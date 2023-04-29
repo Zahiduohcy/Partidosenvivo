@@ -43,7 +43,7 @@
                     style="@style/TextAppearance.AppCompat.Headline"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Team Name"
+                    android:text="@string/team_name"
                     android:textAlignment="center"
                     android:textColor="@color/colorCardBackground"/>
 
@@ -52,7 +52,7 @@
                     style="@style/TextAppearance.AppCompat.Subhead"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="1978"
+                    android:text="@string/_1978"
                     android:textAlignment="center"
                     android:textColor="@color/colorBackground"/>
 
@@ -61,7 +61,7 @@
                     style="@style/TextAppearance.AppCompat.Subhead"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Venue"
+                    android:text="@string/venue"
                     android:textAlignment="center"
                     android:textColor="@color/colorBackground"/>
             </LinearLayout>
@@ -99,6 +99,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_home_footer"/>"/>
+        ads:adUnitId="@string/banner_home_footer"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,75 +1,111 @@
 <resources>
-    <string name="app_name">Football Live Score</string>
+    <string name="app_name" translatable="false">Partidos en vivo</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="fixtures">Fixtures</string>
     <string name="standing">Standing</string>
     <string name="teams">Teams</string>
-    <string name="strip">–</string>
+    <string name="strip" translatable="false">–</string>
 
     <string name="team_a">Team A</string>
     <string name="team_b">Team B</string>
+    <string name="round">Round</string>
+    <string name="status">Status</string>
+    <string name="venue">Venue</string>
+    <string name="lineup">Lineup</string>
+    <string name="formation">Formation</string>
+    <string name="substitutions">Substitutions</string>
+    <string name="statistics">Statistics</string>
+    <string name="team">Team</string>
+    <string name="goals">Goals</string>
+    <string name="shots">Shots</string>
+    <string name="shots_on_target">Shots on Target</string>
+    <string name="fouls">Fouls</string>
+    <string name="corners">Corners</string>
+    <string name="offsides">Offsides</string>
+    <string name="goal_keeper">Goal Keeper</string>
+    <string name="defence">Defence</string>
+    <string name="midfield">Midfield</string>
+    <string name="forward">Forward</string>
+
     <string name="team_statistics">Team Statistics</string>
     <string name="players">Players</string>
-    <string name="player34"></string>
-    <string name="player567"></string>
-    <string name="home_formation"></string>
-    <string name="away_formation"></string>
-    <string name="player1"></string>
-    <string name="player2"></string>
+    <string name="player34" translatable="false"></string>
+    <string name="player567" translatable="false"></string>
+    <string name="home_formation" translatable="false"></string>
+    <string name="away_formation" translatable="false"></string>
+    <string name="player1" translatable="false"></string>
+    <string name="player2" translatable="false"> </string>
+    <string name="empty" translatable="false"></string>
 
     <!-- AdMob ad unit IDs -->
-    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="rewarded_video">ca-app-pub-3940256099942544/5224354917</string>
+    <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_home_footer" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_full_screen" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="rewarded_video" translatable="false">ca-app-pub-3940256099942544/5224354917</string>
 
     <!--test ads-->
     <!--<string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>-->
-    <!--<string name="interstitial_full_screen">ca-app-pub-3940256099942544/8691691433</string>-->
+<!--    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/8691691433</string>-->
     <!--<string name="rewarded_video">ca-app-pub-3940256099942544/5224354917</string>-->
 
-    <string name="diet_plan_content"><![CDATA[
-<div>
-    This is a Football Live Score app. Whether you want to check your best team
-    play or check a friendly match between countries then you can access them
-    all in the app. The structure of the app makes it easy to use and you’ll
-    get all the results you need with just the touch of a button.
-</div>
-<div>
-    Here are some of the features:
-</div>
-<div>
-    Schedules/fixtures overviews per country/league
-</div>
-<div>
-    • Events
-</div>
-<div>
-    • Line-ups
-</div>
-<div>
-    • Live tables during soccer matches
-</div>
-<div>
-    • Live football statistics (ball possession, shots on goal etc)
-</div>
-<div>
-    • Player information
-</div>
-<div>
-    • Team information
-</div>
-<div>
-    • Substitution
-</div>
-<div>
-    <br/>
-</div>
-<div>
-    Cheers!
-</div>
-        ]]>
-    </string>
+    <string name="diet_plan_content">"<![CDATA[ <div>     This is a Football Live Score app. Whether you want to check your best team     play or check a friendly match between countries then you can access them     all in the app. The structure of the app makes it easy to use and you’ll     get all the results you need with just the touch of a button. </div> <div>     Here are some of the features: </div> <div>     Schedules/fixtures overviews per country/league </div> <div>     • Events </div> <div>     • Line-ups </div> <div>     • Live tables during soccer matches </div> <div>     • Live football statistics (ball possession, shots on goal etc) </div> <div>     • Player information </div> <div>     • Team information </div> <div>     • Substitution </div> <div>     <br/> </div> <div>     Cheers! </div>         ]]>     "</string>
+    <string name="substitutes">Substitutes</string>
+    <string name="events">Events</string>
+    <string name="elapsed">Elapsed</string>
+    <string name="player">Player</string>
+    <string name="type">Type</string>
+    <string name="_0">0</string>
+    <string name="age">Age</string>
+    <string name="birth_date">Birth Date</string>
+    <string name="birth_place">Birth Place</string>
+    <string name="birth_country">Birth Country</string>
+    <string name="nationality">Nationality</string>
+    <string name="weight_kg">Weight (kg)</string>
+    <string name="height_m">Height (m)</string>
+    <string name="total">Total</string>
+    <string name="on">On</string>
+    <string name="conceded">Conceded</string>
+    <string name="assists">Assists</string>
+    <string name="accuracy">Accuracy</string>
+    <string name="passes">Passes</string>
+    <string name="blocks">Blocks</string>
+    <string name="interceptions">Interceptions</string>
+    <string name="tackles">Tackles</string>
+    <string name="won">Won</string>
+    <string name="duels">Duels</string>
+    <string name="attempts">Attempts</string>
+    <string name="success">Success</string>
+    <string name="dribbles">Dribbles</string>
+    <string name="drawn">Drawn</string>
+    <string name="committed">Committed</string>
+    <string name="yellow">Yellow</string>
+    <string name="yellored">YelloRed</string>
+    <string name="red">Red</string>
+    <string name="cards">Cards</string>
+    <string name="missed">Missed</string>
+    <string name="saved">Saved</string>
+    <string name="penalty">Penalty</string>
+    <string name="appearences">Appearances</string>
+    <string name="minutes_played">Minutes Played</string>
+    <string name="lineups">Lineups</string>
+    <string name="games">Games</string>
+    <string name="in">In</string>
+    <string name="out">Out</string>
+    <string name="bench">Bench</string>
+    <string name="team_name">Team Name</string>
+    <string name="_1978">1978</string>
+    <string name="matches">Matches</string>
+    <string name="home">Home</string>
+    <string name="away">Away</string>
+    <string name="played">Played</string>
+    <string name="wins">Wins</string>
+    <string name="draws">Draws</string>
+    <string name="loses">Loses</string>
+    <string name="goals_for">Goals For</string>
+    <string name="goals_against">Goals Against</string>
+    <string name="average_goals">Average Goals</string>
+    <string name="country">Country</string>
+    <string name="_2018_1_1">2018-1-1</string>
 </resources>

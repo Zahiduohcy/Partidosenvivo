@@ -29,6 +29,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:gravity="center" android:text="England" android:textSize="18sp"/>
+            android:gravity="center" android:text="@string/country" android:textSize="18sp"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

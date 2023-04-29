@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.ads.AdRequest
 import com.info.footballlive.R
+import com.info.footballlive.app.MyApplication
 import com.info.footballlive.ui.adapter.LeagueAdapter
 import com.info.footballlive.extensions.hide
 import com.info.footballlive.extensions.show
@@ -37,7 +38,7 @@ class LeaguesActivity : AppCompatActivity(), LeaguesContract.View {
         // action bar
         supportActionBar?.title = "Leagues"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
+        MyApplication.showAd(this)
         // admob
         val adRequest = AdRequest.Builder()
                 .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
@@ -75,7 +76,7 @@ class LeaguesActivity : AppCompatActivity(), LeaguesContract.View {
 
     override fun display(leagueList: List<League>) {
         if (leagueList.isEmpty()) {
-            Toast.makeText(this, "Can not pull the league list", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this, "Can not pull the league list", Toast.LENGTH_SHORT).show()
         }
         mLeagueList.clear()
         mLeagueList.addAll(leagueList)

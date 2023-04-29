@@ -83,7 +83,7 @@ class TeamsFragment : Fragment(), TeamsContract.View {
 
     override fun display(teamList: List<Team>) {
         if (teamList.isEmpty()) {
-            Toast.makeText(context, "Can not pull the team list", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(context, "Can not pull the team list", Toast.LENGTH_SHORT).show()
         }
         mTeamList.clear()
         mTeamList.addAll(teamList)

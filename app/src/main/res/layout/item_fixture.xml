@@ -34,6 +34,7 @@
                 android:layout_width="80dp"
                 android:layout_height="100dp"
                 app:srcCompat="@drawable/loading_animation"
+                android:contentDescription="@string/empty"
                 android:id="@+id/homeLogo"/>
             <FrameLayout
                 android:layout_width="80dp"
@@ -45,7 +46,7 @@
                     android:id="@+id/txtHomeTeam"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/layout_margin_16dp"
+                    android:layout_marginEnd="@dimen/layout_margin_16dp"
                     android:gravity="center"
                     android:text="@string/team_a"
                     android:textColor="@color/colorTextLight"
@@ -67,7 +68,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_centerInParent="true"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="RelativeOverlap">
 
             <LinearLayout
                 android:id="@+id/score_layout"
@@ -111,7 +113,7 @@
                 android:id="@+id/txtDateFixture"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2018-1-1"
+                android:text="@string/_2018_1_1"
                 android:layout_gravity="center"
                 android:layout_marginTop="8dp"
                 android:textColor="@color/colorTextExtraLight"/>
@@ -130,6 +132,7 @@
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="100dp"
+                android:contentDescription="@string/empty"
                 app:srcCompat="@drawable/loading_animation"
                 android:id="@+id/awayLogo"/>
             <FrameLayout
@@ -141,7 +144,7 @@
                     android:id="@+id/txtAwayTeam"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/layout_margin_16dp"
+                    android:layout_marginEnd="@dimen/layout_margin_16dp"
                     android:gravity="center"
                     android:text="@string/team_a"
                     android:textColor="@color/colorTextLight"

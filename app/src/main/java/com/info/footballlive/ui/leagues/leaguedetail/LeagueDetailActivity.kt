@@ -8,6 +8,7 @@ import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import com.google.android.gms.ads.AdRequest
 import com.info.footballlive.R
+import com.info.footballlive.app.MyApplication
 import com.info.footballlive.ui.fixtures.FixturesFragment
 import com.info.footballlive.ui.main.AboutActivity
 import com.info.footballlive.ui.standing.StandingFragment
@@ -35,7 +36,7 @@ class LeagueDetailActivity : AppCompatActivity() {
         mLeagueId = intent.getIntExtra(ARG_LEAGUE_ID, 0)
         mSeason = intent.getIntExtra(ARG_SEASON, 2022)
         mLeagueName = intent.getStringExtra(ARG_LEAGUE_NAME)
-
+        MyApplication.showAd(this)
         // action bar
         supportActionBar?.title = mLeagueName
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

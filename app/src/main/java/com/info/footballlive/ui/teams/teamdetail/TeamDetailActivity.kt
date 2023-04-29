@@ -7,6 +7,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
 import com.info.footballlive.R
+import com.info.footballlive.app.MyApplication
 import com.info.footballlive.rest.model.Team
 import com.info.footballlive.ui.adapter.ViewPagerAdapter
 import com.info.footballlive.ui.players.PlayersFragment
@@ -33,7 +34,7 @@ class TeamDetailActivity : AppCompatActivity() {
         // app bar
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
+        MyApplication.showAd(this)
         // admob
         val adRequest = AdRequest.Builder()
                 .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
