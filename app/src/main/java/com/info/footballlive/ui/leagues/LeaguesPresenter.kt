@@ -24,7 +24,10 @@ class LeaguesPresenter(private val mView: LeaguesContract.View) : LeaguesContrac
 
                     override fun onNext(t: LeagueModel?) {
                         t?.let {
-                            mView.display(it.response)
+                            // sort by league start date
+
+                            mView.display(it.response.reversed())
+
                         }
                     }
 

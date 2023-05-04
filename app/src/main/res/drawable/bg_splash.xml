@@ -10,6 +10,6 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/ic_splash"></bitmap>
+            android:src="@drawable/ic_splash"/>
     </item>
 </layer-list>
