@@ -4,10 +4,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.info.footballlive.R
 import com.info.footballlive.rest.model.StandingModel
-import com.info.footballlive.utils.GlideApp
 import kotlinx.android.synthetic.main.item_standing.view.*
 
 class StandingAdapter(private val mStandingList: List<StandingModel.Standings>,
@@ -33,7 +33,7 @@ class StandingAdapter(private val mStandingList: List<StandingModel.Standings>,
             itemView.txtLoss.text = standing.all?.lose.toString()
             itemView.txtGoals.text = standing.all?.goals?._for.toString()
 
-            GlideApp.with(itemView)
+            Glide.with(itemView)
                     .load(standing.league?.logo)
                     .apply(RequestOptions()
                             .placeholder(R.drawable.loading_animation)

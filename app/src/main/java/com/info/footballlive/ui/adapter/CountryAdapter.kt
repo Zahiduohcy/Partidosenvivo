@@ -4,10 +4,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.info.footballlive.R
 import com.info.footballlive.rest.model.Country
-import com.info.footballlive.utils.GlideApp
 import kotlinx.android.synthetic.main.item_country.view.*
 
 class CountryAdapter(private val mCountryList: List<Country>,
@@ -28,14 +28,14 @@ class CountryAdapter(private val mCountryList: List<Country>,
             itemView.txtName.text = country.name
 
             if (country.flag == "World") {
-                GlideApp.with(itemView)
+                Glide.with(itemView)
                         .load(R.drawable.ic_world)
                         .apply(RequestOptions()
                                 .placeholder(R.drawable.loading_animation)
                                 .error(R.drawable.ic_broken_image))
                         .into(itemView.imgPhoto)
             } else {
-                GlideApp.with(itemView)
+                Glide.with(itemView)
                         .load(country.flag)
                         .apply(RequestOptions()
                                 .placeholder(R.drawable.loading_animation)

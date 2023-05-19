@@ -34,7 +34,7 @@ class TeamStatisticsFragment : Fragment(), TeamStatisticsContract.View {
         super.onCreate(savedInstanceState)
         arguments?.let {
             mLeagueId = it.getInt(ARG_LEAGUE_ID)
-            mTeam = it.getParcelable(ARG_TEAM)
+            mTeam = it.getParcelable(ARG_TEAM)!!
         }
     }
 

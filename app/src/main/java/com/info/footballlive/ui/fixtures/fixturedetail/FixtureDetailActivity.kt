@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
@@ -11,7 +12,6 @@ import com.info.footballlive.R
 import com.info.footballlive.app.MyApplication
 import com.info.footballlive.rest.model.Fixture
 import com.info.footballlive.rest.model.fixturedetail.FixtureDetail
-import com.info.footballlive.utils.GlideApp
 import kotlinx.android.synthetic.main.activity_fixture_detail.*
 import kotlinx.android.synthetic.main.item_fixture_event.view.*
 import kotlinx.android.synthetic.main.item_lineup.view.*
@@ -71,7 +71,7 @@ class FixtureDetailActivity : AppCompatActivity(), FixtureDetailContract.View {
             // home team
             txtHomeTeam.text = fixtureDetail.teams?.home?.name
             txtHomeScore.text = fixtureDetail.goals?.home?.toString()
-            GlideApp.with(this)
+            Glide.with(this)
                     .load(fixtureDetail.teams?.home?.logo)
                     .apply(RequestOptions()
                             .placeholder(R.drawable.loading_animation)
@@ -81,7 +81,7 @@ class FixtureDetailActivity : AppCompatActivity(), FixtureDetailContract.View {
             // away team
             txtAwayTeam.text = fixtureDetail.teams?.away?.name
             txtAwayScore.text = fixtureDetail.goals?.away?.toString()
-            GlideApp.with(this)
+            Glide.with(this)
                     .load(fixtureDetail.teams?.away?.logo)
                     .apply(RequestOptions()
                             .placeholder(R.drawable.loading_animation)
@@ -249,7 +249,7 @@ class FixtureDetailActivity : AppCompatActivity(), FixtureDetailContract.View {
         mPresenter.onDestroyPresenter()
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item?.itemId) {
             android.R.id.home -> {
                 finish()

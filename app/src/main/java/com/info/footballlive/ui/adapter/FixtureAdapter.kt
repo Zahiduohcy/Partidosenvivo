@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.request.RequestOptions
 import com.info.footballlive.R
 import com.info.footballlive.rest.model.Fixture
-import com.info.footballlive.utils.GlideApp
+import com.bumptech.glide.Glide
 import com.info.footballlive.utils.getStringDate
 import kotlinx.android.synthetic.main.item_fixture.view.*
 import kotlinx.android.synthetic.main.item_league.view.*
@@ -31,14 +31,14 @@ class FixtureAdapter(private val mFixtureList: List<Fixture>,
             itemView.txtDateFixture.text = dateEvent
             itemView.txtHomeTeam.text = fixture.teams?.home?.name
             itemView.txtAwayTeam.text = fixture.teams?.away?.name
-            GlideApp.with(itemView)
+            Glide.with(itemView)
                 .load(fixture.teams?.home?.logo)
                 .apply(
                     RequestOptions()
                     .placeholder(R.drawable.loading_animation)
                     .error(R.drawable.ic_broken_image))
                 .into(itemView.homeLogo)
-            GlideApp.with(itemView)
+            Glide.with(itemView)
                 .load(fixture.teams?.away?.logo)
                 .apply(
                     RequestOptions()

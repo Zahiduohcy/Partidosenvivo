@@ -3,6 +3,7 @@ package com.info.footballlive.ui.teams.teamdetail
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
@@ -12,7 +13,6 @@ import com.info.footballlive.rest.model.Team
 import com.info.footballlive.ui.adapter.ViewPagerAdapter
 import com.info.footballlive.ui.players.PlayersFragment
 import com.info.footballlive.ui.teams.teamdetail.teamstatistics.TeamStatisticsFragment
-import com.info.footballlive.utils.GlideApp
 import kotlinx.android.synthetic.main.activity_team_detail.*
 
 class TeamDetailActivity : AppCompatActivity() {
@@ -47,7 +47,7 @@ class TeamDetailActivity : AppCompatActivity() {
 
         // get arguments
         mLeagueId = intent.getIntExtra(ARG_LEAGUE_ID, 0)
-        mTeam = intent.getParcelableExtra(ARG_TEAM)
+        mTeam = intent.getParcelableExtra(ARG_TEAM)!!
 
         // display team info
         displayTeamInfo()
@@ -62,7 +62,7 @@ class TeamDetailActivity : AppCompatActivity() {
     }
 
     private fun displayTeamInfo() {
-        GlideApp.with(this)
+        Glide.with(this)
                 .load(mTeam.logo)
                 .apply(RequestOptions()
                         .placeholder(R.drawable.loading_animation)
@@ -74,7 +74,7 @@ class TeamDetailActivity : AppCompatActivity() {
         team_venue.text = mTeam.venue_name
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item?.itemId) {
             android.R.id.home -> {
                 supportFinishAfterTransition()

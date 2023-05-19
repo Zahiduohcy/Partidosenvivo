@@ -20,7 +20,7 @@ class PlayerDetailActivity : AppCompatActivity(), PlayerDetailContract.View {
 
     private lateinit var mPresenter: PlayerDetailPresenter
 
-    private lateinit var mRewardedVideoAd: RewardedVideoAd
+//    private lateinit var mRewardedVideoAd: RewardedVideoAd
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,15 +40,15 @@ class PlayerDetailActivity : AppCompatActivity(), PlayerDetailContract.View {
                 .build()
         adView.loadAd(adRequest)
 
-        mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this)
-        mRewardedVideoAd.loadAd(getString(R.string.rewarded_video), AdRequest.Builder().build())
+//        mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this)
+//        mRewardedVideoAd.loadAd(getString(R.string.rewarded_video), AdRequest.Builder().build())
 
         // presenter
         mPresenter = PlayerDetailPresenter(this)
         mPresenter.getData(mPlayerId)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item?.itemId) {
             android.R.id.home -> {
                 supportFinishAfterTransition()
@@ -122,9 +122,10 @@ class PlayerDetailActivity : AppCompatActivity(), PlayerDetailContract.View {
     }
 
     override fun onDestroy() {
-        if (mRewardedVideoAd.isLoaded) {
+//        if (mRewardedVideoAd.isLoaded) {
+
 //            mRewardedVideoAd.show()
-        }
+//        }
 
         super.onDestroy()
         mPresenter.onDestroyPresenter()

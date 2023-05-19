@@ -1,12 +1,12 @@
 package com.info.footballlive.ui.fixtures
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -17,7 +17,6 @@ import com.info.footballlive.extensions.show
 import com.info.footballlive.rest.model.Fixture
 import com.info.footballlive.ui.fixtures.fixturedetail.FixtureDetailActivity
 import kotlinx.android.synthetic.main.fragment_fixtures.*
-import org.jetbrains.anko.startActivity
 import java.util.*
 
 class FixturesFragment : Fragment(), FixturesContract.View {
@@ -61,7 +60,11 @@ class FixturesFragment : Fragment(), FixturesContract.View {
         // recycler view
         rvFixtureList.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         mAdapter = FixtureAdapter(mFixtureList) {
-            context?.startActivity<FixtureDetailActivity>(FixtureDetailActivity.ARG_FIXTURE_ID to it.fixture?.id)
+            val intent = Intent(context, FixtureDetailActivity::class.java).apply {
+                putExtra(FixtureDetailActivity.ARG_FIXTURE_ID, it.fixture?.id)
+            }
+            startActivity(intent)
+
         }
         rvFixtureList.adapter = mAdapter
 

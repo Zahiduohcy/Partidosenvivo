@@ -1,6 +1,7 @@
 package com.info.footballlive.ui.teams
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -17,7 +18,6 @@ import com.info.footballlive.ui.adapter.TeamAdapter
 import com.info.footballlive.ui.teams.teamdetail.TeamDetailActivity
 import com.info.footballlive.utils.GridItemDecoration
 import kotlinx.android.synthetic.main.fragment_teams.*
-import org.jetbrains.anko.startActivity
 
 
 class TeamsFragment : Fragment(), TeamsContract.View {
@@ -58,9 +58,13 @@ class TeamsFragment : Fragment(), TeamsContract.View {
         rvTeamList.layoutManager = GridLayoutManager(context, 3)
         rvTeamList.addItemDecoration(GridItemDecoration(16, 3))
         mAdapter = TeamAdapter(mTeamList) {
-            context?.startActivity<TeamDetailActivity>(
-                    TeamDetailActivity.ARG_LEAGUE_ID to mLeagueId,
-                    TeamDetailActivity.ARG_TEAM to it)
+            val intent = Intent(context, TeamDetailActivity::class.java)
+            intent.putExtra(TeamDetailActivity.ARG_LEAGUE_ID, mLeagueId)
+            intent.putExtra(TeamDetailActivity.ARG_TEAM, it)
+            startActivity(intent)
+//            context?.startActivity<TeamDetailActivity>(
+//                    TeamDetailActivity.ARG_LEAGUE_ID to mLeagueId,
+//                    TeamDetailActivity.ARG_TEAM to it)
         }
         rvTeamList.adapter = mAdapter
 

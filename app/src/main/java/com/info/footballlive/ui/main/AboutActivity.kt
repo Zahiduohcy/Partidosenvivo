@@ -21,7 +21,7 @@ class AboutActivity : AppCompatActivity() {
         textView.text = Html.fromHtml(getString(R.string.diet_plan_content))
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item?.itemId) {
             android.R.id.home -> {
                 finish()

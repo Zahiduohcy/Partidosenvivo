@@ -4,11 +4,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.info.footballlive.R
 import com.info.footballlive.rest.model.Country
 import com.info.footballlive.rest.model.Player
-import com.info.footballlive.utils.GlideApp
 import kotlinx.android.synthetic.main.item_country.view.*
 import kotlinx.android.synthetic.main.item_player.view.*
 import kotlinx.android.synthetic.main.item_player.view.imgPhoto
@@ -30,7 +30,7 @@ class PlayerAdapter(private val mPlayerList: List<Player>,
         fun bind(player: Player, listener: (Player) -> Unit) {
 
             itemView.txtName.text = player.name
-            GlideApp.with(itemView)
+            Glide.with(itemView)
                 .load(player.photo)
                 .apply(
                     RequestOptions()

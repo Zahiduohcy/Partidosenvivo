@@ -1,5 +1,6 @@
 package com.info.footballlive.ui.countries
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -18,7 +19,6 @@ import com.info.footballlive.rest.model.Country
 import com.info.footballlive.ui.main.AboutActivity
 import com.info.footballlive.utils.GridItemDecoration
 import kotlinx.android.synthetic.main.activity_countries.*
-import org.jetbrains.anko.startActivity
 
 class CountriesActivity : AppCompatActivity(), CountriesContract.View {
 
@@ -42,7 +42,10 @@ class CountriesActivity : AppCompatActivity(), CountriesContract.View {
         // recycler view
         rvCountryList.layoutManager = GridLayoutManager (this,2, RecyclerView.VERTICAL, false)
         mAdapter = CountryAdapter(mCountryList) {
-            startActivity<LeaguesActivity>(LeaguesActivity.ARG_COUNTRY_CODE to it.code)
+            val intent = Intent(this, LeaguesActivity::class.java).apply {
+                putExtra(LeaguesActivity.ARG_COUNTRY_CODE, it.code)
+            }
+            startActivity(intent)
         }
         rvCountryList.adapter = mAdapter
 
@@ -84,9 +87,9 @@ class CountriesActivity : AppCompatActivity(), CountriesContract.View {
         return super.onCreateOptionsMenu(menu)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item?.itemId == R.id.menu_about) {
-            startActivity<AboutActivity>()
+            startActivity(Intent(this,AboutActivity::class.java))
         }
         return super.onOptionsItemSelected(item)
     }

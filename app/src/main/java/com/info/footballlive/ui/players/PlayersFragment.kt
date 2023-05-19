@@ -1,6 +1,7 @@
 package com.info.footballlive.ui.players
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -17,7 +18,6 @@ import com.info.footballlive.ui.adapter.PlayerAdapter
 import com.info.footballlive.ui.players.playerdetail.PlayerDetailActivity
 import com.info.footballlive.utils.GridItemDecoration
 import kotlinx.android.synthetic.main.fragment_players.*
-import org.jetbrains.anko.startActivity
 
 class PlayersFragment : Fragment(), PlayersContract.View {
 
@@ -57,7 +57,10 @@ class PlayersFragment : Fragment(), PlayersContract.View {
         rvPlayerList.layoutManager = GridLayoutManager(context, 3)
         rvPlayerList.addItemDecoration(GridItemDecoration(16, 3))
         mAdapter = PlayerAdapter(mPlayerList) {
-            context?.startActivity<PlayerDetailActivity>(PlayerDetailActivity.ARG_PLAYER_ID to it.id)
+            val intent = Intent(context, PlayerDetailActivity::class.java)
+            intent.putExtra(PlayerDetailActivity.ARG_PLAYER_ID, it.id)
+            startActivity(intent)
+//            context?.startActivity<PlayerDetailActivity>(PlayerDetailActivity.ARG_PLAYER_ID to it.id)
         }
         rvPlayerList.adapter = mAdapter
 

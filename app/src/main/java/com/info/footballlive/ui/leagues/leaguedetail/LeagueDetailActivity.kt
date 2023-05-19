@@ -1,5 +1,6 @@
 package com.info.footballlive.ui.leagues.leaguedetail
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -14,7 +15,6 @@ import com.info.footballlive.ui.main.AboutActivity
 import com.info.footballlive.ui.standing.StandingFragment
 import com.info.footballlive.ui.teams.TeamsFragment
 import kotlinx.android.synthetic.main.activity_league_detail.*
-import org.jetbrains.anko.startActivity
 
 class LeagueDetailActivity : AppCompatActivity() {
 
@@ -35,7 +35,7 @@ class LeagueDetailActivity : AppCompatActivity() {
         // get arguments
         mLeagueId = intent.getIntExtra(ARG_LEAGUE_ID, 0)
         mSeason = intent.getIntExtra(ARG_SEASON, 2022)
-        mLeagueName = intent.getStringExtra(ARG_LEAGUE_NAME)
+        mLeagueName = intent.getStringExtra(ARG_LEAGUE_NAME).toString()
         MyApplication.showAd(this)
         // action bar
         supportActionBar?.title = mLeagueName
@@ -77,7 +77,7 @@ class LeagueDetailActivity : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item?.itemId) {
             android.R.id.home -> {
                 supportFinishAfterTransition()
@@ -85,7 +85,9 @@ class LeagueDetailActivity : AppCompatActivity() {
                 true
             }
             R.id.menu_about -> {
-                startActivity<AboutActivity>()
+//                startActivity<AboutActivity>()
+                val intent = Intent(this, AboutActivity::class.java)
+                startActivity(intent)
                 true
             }
             else -> super.onOptionsItemSelected(item)

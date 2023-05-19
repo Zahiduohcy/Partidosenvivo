@@ -4,10 +4,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.info.footballlive.R
 import com.info.footballlive.rest.model.League
-import com.info.footballlive.utils.GlideApp
 import com.info.footballlive.utils.getStringDate
 import kotlinx.android.synthetic.main.item_league.view.*
 
@@ -34,7 +34,7 @@ class LeagueAdapter(private val mLeagueList: List<League>,
             val seasonEnd: String = league.seasons?.get(league.seasons!!.lastIndex)?.end?.let { getStringDate(it) } ?: "-"
             itemView.txtSeasonEnd.text = seasonEnd
 
-            GlideApp.with(itemView)
+            Glide.with(itemView)
                     .load(league.league?.logo)
                     .apply(RequestOptions()
                             .placeholder(R.drawable.loading_animation)

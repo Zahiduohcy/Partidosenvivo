@@ -4,10 +4,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.info.footballlive.R
 import com.info.footballlive.rest.model.Team
-import com.info.footballlive.utils.GlideApp
 import kotlinx.android.synthetic.main.item_team.view.*
 
 class TeamAdapter(private val mTeamList: List<Team>,
@@ -27,7 +27,7 @@ class TeamAdapter(private val mTeamList: List<Team>,
 
             itemView.txtName.text = team.name
 
-            GlideApp.with(itemView)
+            Glide.with(itemView)
                     .load(team.logo)
                     .apply(RequestOptions()
                             .placeholder(R.drawable.loading_animation)

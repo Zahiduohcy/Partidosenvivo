@@ -39,15 +39,16 @@
     <string name="player2" translatable="false"> </string>
     <string name="empty" translatable="false"></string>
 
-    <!-- AdMob ad unit IDs -->
+    <!-- Test ad unit IDs -->
     <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
     <string name="banner_home_footer" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
     <string name="interstitial_full_screen" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
     <string name="rewarded_video" translatable="false">ca-app-pub-3940256099942544/5224354917</string>
 
-    <!--test ads-->
-    <!--<string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>-->
-<!--    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/8691691433</string>-->
+    <!--Live ads-->
+<!--    <string name="admob_app_id" translatable="false">ca-app-pub-5168031890776658~1826857414</string>-->
+<!--    <string name="banner_home_footer"  translatable="false">ca-app-pub-5168031890776658/2674988938</string>-->
+<!--    <string name="interstitial_full_screen"  translatable="false">ca-app-pub-5168031890776658/7027213206</string>-->
     <!--<string name="rewarded_video">ca-app-pub-3940256099942544/5224354917</string>-->
 
     <string name="diet_plan_content">"<![CDATA[ <div>     This is a Football Live Score app. Whether you want to check your best team     play or check a friendly match between countries then you can access them     all in the app. The structure of the app makes it easy to use and you’ll     get all the results you need with just the touch of a button. </div> <div>     Here are some of the features: </div> <div>     Schedules/fixtures overviews per country/league </div> <div>     • Events </div> <div>     • Line-ups </div> <div>     • Live tables during soccer matches </div> <div>     • Live football statistics (ball possession, shots on goal etc) </div> <div>     • Player information </div> <div>     • Team information </div> <div>     • Substitution </div> <div>     <br/> </div> <div>     Cheers! </div>         ]]>     "</string>

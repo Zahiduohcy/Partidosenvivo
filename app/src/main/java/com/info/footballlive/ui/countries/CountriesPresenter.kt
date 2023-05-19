@@ -30,7 +30,7 @@ class CountriesPresenter(val mView: CountriesContract.View) : CountriesContract.
 
                     override fun onError(t: Throwable?) {
                         mView.hideLoading()
-                        Log.e("Error",t?.localizedMessage)
+                        t?.localizedMessage?.let { Log.e("Error", it) }
                         mView.display(Collections.emptyList())
                     }
                 })
