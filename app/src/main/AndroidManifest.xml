@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.info.footballlive">
+          package="com.envivo.futbolenvivoyendirectopartidos">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
-        android:name=".app.MyApplication"
+        android:name="com.envivo.futbolenvivoyendirectopartidos.app.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,10 +18,10 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/admob_app_id"/>
 
-        <activity android:name=".ui.main.AboutActivity">
+        <activity android:name="com.envivo.futbolenvivoyendirectopartidos.ui.main.AboutActivity">
         </activity>
         <activity
-            android:name=".ui.main.SplashActivity"
+            android:name="com.envivo.futbolenvivoyendirectopartidos.ui.main.SplashActivity"
             android:theme="@style/SplashTheme"
             android:exported="true">
             <intent-filter>
@@ -31,22 +31,22 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.countries.CountriesActivity">
+        <activity android:name="com.envivo.futbolenvivoyendirectopartidos.ui.countries.CountriesActivity">
         </activity>
-        <activity android:name=".ui.leagues.LeaguesActivity">
+        <activity android:name="com.envivo.futbolenvivoyendirectopartidos.ui.leagues.LeaguesActivity">
         </activity>
-        <activity android:name=".ui.leagues.leaguedetail.LeagueDetailActivity">
+        <activity android:name="com.envivo.futbolenvivoyendirectopartidos.ui.leagues.leaguedetail.LeagueDetailActivity">
         </activity>
         <activity
-            android:name=".ui.fixtures.fixturedetail.FixtureDetailActivity"
+            android:name="com.envivo.futbolenvivoyendirectopartidos.ui.fixtures.fixturedetail.FixtureDetailActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".ui.teams.teamdetail.TeamDetailActivity"
+            android:name="com.envivo.futbolenvivoyendirectopartidos.ui.teams.teamdetail.TeamDetailActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".ui.players.playerdetail.PlayerDetailActivity"
+            android:name="com.envivo.futbolenvivoyendirectopartidos.ui.players.playerdetail.PlayerDetailActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
